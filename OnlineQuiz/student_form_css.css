@@ -1,0 +1,563 @@
+/* Student Information Form - Modern CSS Styles */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Main Form Container */
+#form1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+/* Header Styles */
+h1 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+/* Form Section */
+.form-section {
+    padding: 40px;
+    background: white;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+table td:first-child {
+    font-weight: 600;
+    color: #555;
+    text-align: right;
+    padding-right: 20px;
+    width: 150px;
+    font-size: 16px;
+}
+
+/* Input Styles */
+input[type="text"], 
+select,
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    outline: none;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #4facfe;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Radio Button Styles */
+.radio-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    accent-color: #4facfe;
+}
+
+/* Dropdown Styles */
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+/* File Upload Styles */
+input[type="file"] {
+    padding: 10px;
+    border: 2px dashed #4facfe;
+    border-radius: 10px;
+    background: #f0f8ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+input[type="file"]:hover {
+    border-color: #2196f3;
+    background: #e3f2fd;
+}
+
+/* Button Styles */
+input[type="submit"],
+button,
+.btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+input[type="submit"]:hover,
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* GridView Styles */
+.gridview-container {
+    margin-top: 40px;
+    padding: 0 40px 40px 40px;
+    background: white;
+}
+
+table.gridview {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* GridView Header */
+.gridview th,
+table[id*="GridView"] tr:first-child th,
+table[id*="GridView"] .header-row td {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 18px 15px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* GridView Rows */
+.gridview td,
+table[id*="GridView"] td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+table[id*="GridView"] tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+table[id*="GridView"] tr:hover {
+    background: #e3f2fd;
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+/* GridView Images */
+table[id*="GridView"] img {
+    border-radius: 10px;
+    border: 3px solid #e1e5e9;
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+table[id*="GridView"] img:hover {
+    transform: scale(1.1);
+    border-color: #4facfe;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* GridView Action Links */
+table[id*="GridView"] a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+table[id*="GridView"] a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Delete Link Special Styling */
+table[id*="GridView"] a[id*="LinkButton2"] {
+    color: #e74c3c;
+}
+
+table[id*="GridView"] a[id*="LinkButton2"]:hover {
+    background: #e74c3c;
+    color: white;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* Form Animation */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table {
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .form-section {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        padding: 20px;
+    }
+    
+    table td:first-child {
+        text-align: left;
+        padding-right: 15px;
+        width: auto;
+        display: block;
+        padding-bottom: 5px;
+    }
+    
+    table td {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+    
+    table tr {
+        display: block;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+    
+    .gridview-container {
+        padding: 20px;
+        overflow-x: auto;
+    }
+    
+    table[id*="GridView"] {
+        min-width: 600px;
+    }
+}
+
+/* Form Validation Styles */
+.validation-error {
+    border-color: #e74c3c !important;
+    background: #fff5f5 !important;
+}
+
+.validation-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.success-message {
+    background: linear-gradient(135deg, #56cc9d 0%, #6be89b 100%);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(86, 204, 157, 0.3);
+}
+
+/* Error Message */
+.error-message {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Hover Effects */
+.form-row {
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form-row:hover {
+    background: rgba(79, 172, 254, 0.05);
+    transform: translateX(5px);
+}
+
+/* Additional Modern Touches */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.shadow-lg {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid View Enhanced Styling */
+table[id*="GridView"] {
+    border: none;
+    font-size: 14px;
+}
+
+table[id*="GridView"] tr {
+    transition: all 0.3s ease;
+}
+
+table[id*="GridView"] tr:first-child {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+table[id*="GridView"] tr:first-child td {
+    color: white !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 18px 15px !important;
+}
+
+/* Form Field Grouping */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Icon Integration (if you want to add icons later) */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+}
+
+/* Animated Placeholder Effect */
+.floating-label {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.floating-label input {
+    padding-top: 20px;
+    padding-bottom: 8px;
+}
+
+.floating-label label {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    color: #999;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+    top: 4px;
+    font-size: 12px;
+    color: #4facfe;
+    font-weight: 600;
+}
+
+/* Card Layout Alternative */
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mt-4 { margin-top: 20px; }
+.mb-4 { margin-bottom: 20px; }
+.p-4 { padding: 20px; }
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    }
+    
+    #form1 {
+        background: rgba(44, 62, 80, 0.95);
+        color: white;
+    }
+    
+    .form-section {
+        background: #34495e;
+    }
+    
+    input[type="text"],
+    select {
+        background: #2c3e50;
+        border-color: #4a5f7a;
+        color: white;
+    }
+    
+    input[type="text"]:focus,
+    select:focus {
+        background: #34495e;
+        border-color: #4facfe;
+    }
+}
