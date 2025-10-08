@@ -72,6 +72,7 @@
     <Content Include="AdminAddQuiz.aspx" />
     <Content Include="AdminDashboard.aspx" />
     <Content Include="AdminPage.aspx" />
+    <Content Include="AdminProblem.aspx" />
     <Content Include="AdminRanking.aspx" />
     <Content Include="AdminRemoveQuiz.aspx" />
     <Content Include="App_Data\OnlineQuiz_db.mdf" />
@@ -104,7 +105,6 @@
     <Content Include="images\topics\undraw_Remote_design_team_re_urdx.png" />
     <Content Include="images\topics\undraw_viral_tweet_gndb.png" />
     <Content Include="js\bootstrap.bundle.min.js" />
-    <Content Include="js\click-scroll.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.sticky.js" />
@@ -158,6 +158,13 @@
     </Compile>
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProblem.aspx.cs">
+      <DependentUpon>AdminProblem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProblem.aspx.designer.cs">
+      <DependentUpon>AdminProblem.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminRanking.aspx.cs">
       <DependentUpon>AdminRanking.aspx</DependentUpon>

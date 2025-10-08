@@ -144,9 +144,9 @@ https://templatemo.com/tm-590-topic-listing
 
                             <div class="custom-block-overlay-text d-flex">
                                 <div>
-                                    <h5 class="text-white mb-2">Finance</h5>
+                                    <h5 class="text-white mb-2">Python</h5>
 
-                                    <p class="text-white">Topic Listing Template includes homepage, listing page, detail page, and contact page. You can feel free to edit and adapt for your CMS requirements.</p>
+                                    <p class="text-white">Python is a high-level, versatile programming language known for its readability and simplicity. It’s widely used in web development, data science, automation, and more.</p>
 
                                     <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
                                 </div>
@@ -186,7 +186,7 @@ https://templatemo.com/tm-590-topic-listing
             <div class="row">
 
                 <div class="col-lg-3 col-12 mb-4 pb-2">
-                    <a class="navbar-brand mb-2" href="index.html">
+                    <a class="navbar-brand mb-2" href="<%--index.html--%>">
                         <i class="bi-back"></i>
                         <span>Topic</span>
                     </a>
@@ -266,7 +266,7 @@ https://templatemo.com/tm-590-topic-listing
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
+    <%--<script src="js/click-scroll.js"></script>--%>
     <script src="js/custom.js"></script>
     </body>
 </html>

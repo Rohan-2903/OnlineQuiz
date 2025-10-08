@@ -184,7 +184,7 @@ https://templatemo.com/tm-590-topic-listing
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_2">History</a>
+                        <a class="nav-link click-scroll" href="AdminProblem.aspx">Problem</a>
                     </li>
 
                     <li class="nav-item">

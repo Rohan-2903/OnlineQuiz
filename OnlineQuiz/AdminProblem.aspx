@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OnlineQuiz.Master" AutoEventWireup="true" CodeBehind="UserHistory.aspx.cs" Inherits="OnlineQuiz.UserHistory" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OnlineQuiz.Master" AutoEventWireup="true" CodeBehind="AdminProblem.aspx.cs" Inherits="OnlineQuiz.AdminProblem" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!doctype html>
@@ -164,7 +164,7 @@ https://templatemo.com/tm-590-topic-listing
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="AdminDashboard.aspx">
                 <i class="bi-back"></i>
                 <span>Topic</span>
             </a>
@@ -180,29 +180,23 @@ https://templatemo.com/tm-590-topic-listing
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-lg-5 me-lg-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="UserHome.aspx">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="UserQuiz.aspx">Quiz</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="UserHistory.aspx">History</a>
+                        <a class="nav-link click-scroll" href="AdminDashboard.aspx">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="UserRanking.aspx">Ranking</a>
+                        <a class="nav-link click-scroll" href="AdminProblem.aspx">Problem</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="UserCourse.aspx">Course</a>
+                        <a class="nav-link click-scroll" href="AdminRanking.aspx">Ranking</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="AboutUser.aspx">About Us</a>
+                        <a class="nav-link click-scroll" href="AdminAddQuiz.aspx">Add Quiz</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="ContPageuser.aspx">Contact</a>
+                        <a class="nav-link click-scroll" href="AdminRemoveQuiz.aspx">Remove Quiz</a>
                     </li>
 
 
@@ -221,7 +215,7 @@ https://templatemo.com/tm-590-topic-listing
                 <div class="col-lg-5 col-12">
                     <nav aria-label="breadcrumb">
                         <center>
-                            <h2 class="text-white">HISTORY </h2>
+                            <h2 class="text-white">SOLVE PROBLEM </h2>
                         </center>
                 </div>
 
@@ -230,14 +224,12 @@ https://templatemo.com/tm-590-topic-listing
     </header>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <footer class="site-footer section-padding">
         <div class="container">
             <div class="row">
 
                 <div class="col-lg-3 col-12 mb-4 pb-2">
-                    <a class="navbar-brand mb-2" href="index.html">
+                    <a class="navbar-brand mb-2" href="#">
                         <i class="bi-back"></i>
                         <span>Topic</span>
                     </a>
@@ -252,9 +244,6 @@ https://templatemo.com/tm-590-topic-listing
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Quiz</a>
-                        </li>
-                        <li class="site-footer-link-item">
                             <a href="#" class="site-footer-link">History</a>
                         </li>
 
@@ -263,7 +252,7 @@ https://templatemo.com/tm-590-topic-listing
                         </li>
 
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Contact</a>
+                            <a href="#" class="site-footer-link">Course</a>
                         </li>
                     </ul>
                 </div>
@@ -272,7 +261,7 @@ https://templatemo.com/tm-590-topic-listing
                     <h6 class="site-footer-title mb-3">Information</h6>
 
                     <p class="text-white d-flex mb-1">
-                        <a href="tel: 305-240-9671" class="site-footer-link">9426548585
+                        <a href="tel: 305-240-9671" class="site-footer-link">305-240-9671
                         </a>
                     </p>
 
@@ -312,13 +301,14 @@ https://templatemo.com/tm-590-topic-listing
         </div>
     </footer>
 
-
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
-    <%--<script src="js/click-scroll.js"></script>--%>
     <script src="js/custom.js"></script>
+
     </body>
 </html>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 </asp:Content>
