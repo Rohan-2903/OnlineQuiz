@@ -31,134 +31,58 @@ TemplateMo 590 topic listing
 https://templatemo.com/tm-590-topic-listing
 
 -->
-        <%-- <style>
-            h1 {
-                /* background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); */
-                color: white;
-                text-align: center;
-                padding: 30px 20px;
-                margin: 0;
-                font-size: 2.5em;
-                font-weight: 600;
-                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                letter-spacing: 1px;
-            }
-
-            .gridview-container {
-                margin-top: 40px;
-                padding: 0 40px 40px 40px;
-                background: white;
-            }
-
-            table.gridview {
-                width: 100%;
+        <style>
+            table {
+                width: 60%;
+                margin: 30px auto;
                 border-collapse: collapse;
-                border-spacing: 0;
-                background: white;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            }
-
-            /* GridView Header */
-            .gridview th,
-            table[id*="GridView"] tr:first-child th,
-            table[id*="GridView"] .header-row td {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
-                padding: 18px 15px;
-                font-weight: 600;
-                text-align: center;
-                font-size: 14px;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-            }
-
-            /* GridView Rows */
-            .gridview td,
-            table[id*="GridView"] td {
-                padding: 15px;
-                text-align: center;
-                border-bottom: 1px solid #f0f0f0;
-                vertical-align: middle;
-            }
-
-            table[id*="GridView"] tr:nth-child(even) {
-                background: #f8f9fa;
-            }
-
-            table[id*="GridView"] tr:hover {
-                background: #e3f2fd;
-                transform: scale(1.01);
-                transition: all 0.3s ease;
-            }
-
-            /* GridView Images */
-            table[id*="GridView"] img {
+                background-color: #f9f9f9;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                padding: 20px;
                 border-radius: 10px;
-                border: 3px solid #e1e5e9;
-                transition: all 0.3s ease;
-                object-fit: cover;
             }
 
-                table[id*="GridView"] img:hover {
-                    transform: scale(1.1);
-                    border-color: #4facfe;
-                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                }
-
-            /* GridView Action Links */
-            table[id*="GridView"] a {
-                color: #667eea;
-                text-decoration: none;
-                font-weight: 600;
-                padding: 8px 16px;
-                border-radius: 20px;
-                transition: all 0.3s ease;
-                margin: 0 5px;
-                display: inline-block;
-            }
-
-                table[id*="GridView"] a:hover {
-                    background: #667eea;
-                    color: white;
-                    transform: translateY(-2px);
-                    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-                }
-
-                /* Delete Link Special Styling */
-                table[id*="GridView"] a[id*="LinkButton2"] {
-                    color: #e74c3c;
-                }
-
-                    table[id*="GridView"] a[id*="LinkButton2"]:hover {
-                        background: #e74c3c;
-                        color: white;
-                        box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
-                    }
-
-            /* Grid View Enhanced Styling */
-            table[id*="GridView"] {
-                border: none;
+            td {
+                padding: 10px;
+                font-family: Arial, sans-serif;
                 font-size: 14px;
             }
 
-                table[id*="GridView"] tr {
-                    transition: all 0.3s ease;
+            h2 {
+                text-align: center;
+                font-family: Arial, sans-serif;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+            .textbox {
+                width: 100%;
+                padding: 8px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .dropdown {
+                width: 100%;
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .submit-btn {
+                padding: 10px 20px;
+                font-size: 15px;
+                background-color: #4285f4;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                .submit-btn:hover {
+                    background-color: #3367d6;
                 }
-
-                    table[id*="GridView"] tr:first-child {
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-                    }
-
-                        table[id*="GridView"] tr:first-child td {
-                            color: white !important;
-                            font-weight: 600 !important;
-                            text-transform: uppercase;
-                            letter-spacing: 0.5px;
-                            padding: 18px 15px !important;
-                        }
-        </style>--%>
+        </style>
     </head>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -225,6 +149,50 @@ https://templatemo.com/tm-590-topic-listing
     </header>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <center>
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+        <div class="form-container">
+            <asp:Label ID="lblSubject" runat="server" Text="Select Subject: "></asp:Label>
+            <asp:DropDownList ID="ddlSubject" runat="server" CssClass="form-control">
+                <asp:ListItem>-- Select Subject --</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+
+            <asp:Label ID="lblQuestion" runat="server" Text="Question: "></asp:Label>
+            <asp:TextBox ID="txtQuestion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3"></asp:TextBox>
+            <br />
+
+            <asp:Label ID="lblOptionA" runat="server" Text="Option A: "></asp:Label>
+            <asp:TextBox ID="txtOptionA" runat="server" CssClass="form-control"></asp:TextBox>
+            <br />
+
+            <asp:Label ID="lblOptionB" runat="server" Text="Option B: "></asp:Label>
+            <asp:TextBox ID="txtOptionB" runat="server" CssClass="form-control"></asp:TextBox>
+            <br />
+
+            <asp:Label ID="lblOptionC" runat="server" Text="Option C: "></asp:Label>
+            <asp:TextBox ID="txtOptionC" runat="server" CssClass="form-control"></asp:TextBox>
+            <br />
+
+            <asp:Label ID="lblOptionD" runat="server" Text="Option D: "></asp:Label>
+            <asp:TextBox ID="txtOptionD" runat="server" CssClass="form-control"></asp:TextBox>
+            <br />
+
+            <asp:Label ID="lblCorrect" runat="server" Text="Correct Option: "></asp:Label>
+            <asp:DropDownList ID="ddlCorrectOption" runat="server" CssClass="form-control">
+                <asp:ListItem Text="A" Value="A"></asp:ListItem>
+                <asp:ListItem Text="B" Value="B"></asp:ListItem>
+                <asp:ListItem Text="C" Value="C"></asp:ListItem>
+                <asp:ListItem Text="D" Value="D"></asp:ListItem>
+            </asp:DropDownList>
+            <br />
+
+            <asp:Button ID="btnAddQuestion" runat="server" Text="Add Question" CssClass="btn btn-primary" />
+            <br />
+            <br />
+            <asp:Label ID="lblMessage" runat="server" ForeColor="Green"></asp:Label>
+        </div>
+    </center>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <footer class="site-footer section-padding">
