@@ -140,7 +140,7 @@ https://templatemo.com/tm-590-topic-listing
             <div class="row">
 
                 <div class="col-lg-12 col-12">
-                    <h3 class="mb-4 pb-2">We'd love to hear from you</h3>
+                    <h3 class="mb-4 pb-2"></h3>
                 </div>
 
                 <div class="col-lg-6 col-12">
@@ -148,7 +148,7 @@ https://templatemo.com/tm-590-topic-listing
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="form-floating">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Name" required="">
+                                    <asp:TextBox ID="txtnm" class="form-control" runat="server"></asp:TextBox>
 
                                     <label for="floatingInput">Name</label>
                                 </div>
@@ -156,30 +156,31 @@ https://templatemo.com/tm-590-topic-listing
 
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="form-floating">
-                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
-
+                                    <asp:TextBox ID="txteml" class="form-control" runat="server"></asp:TextBox>
                                     <label for="floatingInput">Email address</label>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-12">
                                 <div class="form-floating">
-                                    <input type="text" name="subject" id="name" class="form-control" placeholder="Name" required="">
-
+                                    <asp:TextBox ID="txtsub" class="form-control" runat="server"></asp:TextBox>
                                     <label for="floatingInput">Subject</label>
                                 </div>
 
                                 <div class="form-floating">
-                                    <textarea class="form-control" id="message" name="message" placeholder="Tell me about the project"></textarea>
-
+                                    <asp:TextBox ID="txtprob" class="form-control" runat="server"></asp:TextBox>
                                     <label for="floatingTextarea">Tell me about the project</label>
                                 </div>
                             </div>
 
                             <div class="col-lg-4 col-12 ms-auto">
-                                <button type="submit" class="form-control">Submit</button>
+                                <center>
+                                    <asp:Button ID="Button1" class="form-control" runat="server" Text="Submit" OnClick="Button1_Click" />
+                                </center>
                             </div>
-
+                            <div>
+                                <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
+                            </div>
                         </div>
                     </form>
                 </div>
