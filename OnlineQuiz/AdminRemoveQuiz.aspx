@@ -192,6 +192,10 @@ https://templatemo.com/tm-590-topic-listing
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link click-scroll" href="AddCourse.aspx">Add Course</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link click-scroll" href="AdminAddQuiz.aspx">Add Quiz</a>
                     </li>
 

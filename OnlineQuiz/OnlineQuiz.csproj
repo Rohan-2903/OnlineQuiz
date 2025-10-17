@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUser.aspx" />
+    <Content Include="AddCourse.aspx" />
     <Content Include="admin.jpg" />
     <Content Include="AdminAddQuiz.aspx" />
     <Content Include="AdminDashboard.aspx" />
@@ -137,6 +138,13 @@
     </Compile>
     <Compile Include="AboutUser.aspx.designer.cs">
       <DependentUpon>AboutUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCourse.aspx.cs">
+      <DependentUpon>AddCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCourse.aspx.designer.cs">
+      <DependentUpon>AddCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminAddQuiz.aspx.cs">
       <DependentUpon>AdminAddQuiz.aspx</DependentUpon>

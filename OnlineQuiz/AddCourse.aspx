@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OnlineQuiz.Master" AutoEventWireup="true" CodeBehind="AdminAddQuiz.aspx.cs" Inherits="OnlineQuiz.AdminAddQuiz" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OnlineQuiz.Master" AutoEventWireup="true" CodeBehind="AddCourse.aspx.cs" Inherits="OnlineQuiz.AddCourse" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!doctype html>
@@ -31,58 +31,7 @@ TemplateMo 590 topic listing
 https://templatemo.com/tm-590-topic-listing
 
 -->
-        <style>
-            table {
-                width: 60%;
-                margin: 30px auto;
-                border-collapse: collapse;
-                background-color: #f9f9f9;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                padding: 20px;
-                border-radius: 10px;
-            }
 
-            td {
-                padding: 10px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-            }
-
-            h2 {
-                text-align: center;
-                font-family: Arial, sans-serif;
-                color: #333;
-                margin-bottom: 10px;
-            }
-
-            .textbox {
-                width: 100%;
-                padding: 8px;
-                font-size: 14px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
-
-            .dropdown {
-                width: 100%;
-                padding: 8px;
-                font-size: 14px;
-            }
-
-            .submit-btn {
-                padding: 10px 20px;
-                font-size: 15px;
-                background-color: #4285f4;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-                .submit-btn:hover {
-                    background-color: #3367d6;
-                }
-        </style>
     </head>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -144,7 +93,7 @@ https://templatemo.com/tm-590-topic-listing
                     <nav aria-label="breadcrumb">
                     </nav>
                     <center>
-                        <h2 class="text-white">ADD QUIZ </h2>
+                        <h2 class="text-white">ADD COURSE </h2>
                     </center>
                 </div>
 
@@ -153,50 +102,6 @@ https://templatemo.com/tm-590-topic-listing
     </header>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <center>
-        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-            <div class="form-container">
-                <asp:Label ID="lblSubject" runat="server" Text="Select Subject: "></asp:Label>
-                <asp:DropDownList ID="ddlSubject" runat="server" CssClass="form-control">
-                    <asp:ListItem>-- Select Subject --</asp:ListItem>
-                </asp:DropDownList>
-                <br />
-
-                <asp:Label ID="lblQuestion" runat="server" Text="Question: "></asp:Label>
-                <asp:TextBox ID="txtQuestion" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3"></asp:TextBox>
-                <br />
-
-                <asp:Label ID="lblOptionA" runat="server" Text="Option A: "></asp:Label>
-                <asp:TextBox ID="txtOptionA" runat="server" CssClass="form-control"></asp:TextBox>
-                <br />
-
-                <asp:Label ID="lblOptionB" runat="server" Text="Option B: "></asp:Label>
-                <asp:TextBox ID="txtOptionB" runat="server" CssClass="form-control"></asp:TextBox>
-                <br />
-
-                <asp:Label ID="lblOptionC" runat="server" Text="Option C: "></asp:Label>
-                <asp:TextBox ID="txtOptionC" runat="server" CssClass="form-control"></asp:TextBox>
-                <br />
-
-                <asp:Label ID="lblOptionD" runat="server" Text="Option D: "></asp:Label>
-                <asp:TextBox ID="txtOptionD" runat="server" CssClass="form-control"></asp:TextBox>
-                <br />
-
-                <asp:Label ID="lblCorrect" runat="server" Text="Correct Option: "></asp:Label>
-                <asp:DropDownList ID="ddlCorrectOption" runat="server" CssClass="form-control">
-                    <asp:ListItem Text="A" Value="A"></asp:ListItem>
-                    <asp:ListItem Text="B" Value="B"></asp:ListItem>
-                    <asp:ListItem Text="C" Value="C"></asp:ListItem>
-                    <asp:ListItem Text="D" Value="D"></asp:ListItem>
-                </asp:DropDownList>
-                <br />
-
-                <asp:Button ID="btnAddQuestion" runat="server" Text="Add Question" CssClass="btn btn-primary" />
-                <br />
-                <br />
-                <asp:Label ID="lblMessage" runat="server" ForeColor="Green"></asp:Label>
-            </div>
-    </center>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <footer class="site-footer section-padding">

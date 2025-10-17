@@ -190,6 +190,10 @@ https://templatemo.com/tm-590-topic-listing
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link click-scroll" href="AddCourse.aspx">Add Course</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link click-scroll" href="AdminAddQuiz.aspx">Add Quiz</a>
                     </li>
 
@@ -201,7 +205,7 @@ https://templatemo.com/tm-590-topic-listing
                 </ul>
 
                 <div>
-                            <a class="nav-link click-scroll" href="OnlineQuizHome.aspx"> Log Out</a>
+                    <a class="nav-link click-scroll" href="OnlineQuizHome.aspx">Log Out</a>
                 </div>
             </div>
         </div>
@@ -349,6 +353,5 @@ https://templatemo.com/tm-590-topic-listing
 </html>
 </asp:Content>
 <asp:Content ID="Content5" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
-  
 </asp:Content>
 
