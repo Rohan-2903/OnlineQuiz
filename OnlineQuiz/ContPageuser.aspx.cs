@@ -22,11 +22,20 @@ namespace OnlineQuiz
         protected void Page_Load(object sender, EventArgs e)
         {
             getcon();
+
         }
         void getcon()
         {
             con = new SqlConnection(s);
             con.Open();
+        }
+        void imgupload()
+        {
+            if (fipimg.HasFile)
+            {
+                fnm = "Prob_Images/" + fipimg.FileName;
+                fipimg.SaveAs(Server.MapPath(fnm));
+            }
         }
         void clear()
         {
@@ -34,14 +43,15 @@ namespace OnlineQuiz
             txteml.Text = "";
             txtsub.Text = "";
             txtprob.Text = "";
-
+            fnm = "";
 
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             getcon();
-            cmd = new SqlCommand("insert into admin_contect(Name,Email,Subject,Problem)values('" + txtnm.Text + "','" + txteml.Text + "','" + txtsub.Text + "','" + txtprob.Text + "')", con);
+            imgupload();
+            cmd = new SqlCommand("insert into admin_contect(Name,Email,Subject,Problem,Prob_Images)values('" + txtnm.Text + "','" + txteml.Text + "','" + txtsub.Text + "','" + txtprob.Text + "','" + fnm + "')", con);
             cmd.ExecuteNonQuery();
             lblmsg.Text = "Your Problem Stored Successfully!";
             lblmsg.ForeColor = System.Drawing.Color.Green;

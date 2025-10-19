@@ -171,6 +171,11 @@ https://templatemo.com/tm-590-topic-listing
                                     <asp:TextBox ID="txtprob" class="form-control" runat="server"></asp:TextBox>
                                     <label for="floatingTextarea">Tell me about the project</label>
                                 </div>
+
+                                <div class="form-floating">
+                                    <asp:FileUpload ID="fipimg" runat="server" />
+                                    
+                                </div>
                             </div>
 
                             <div class="col-lg-4 col-12 ms-auto">

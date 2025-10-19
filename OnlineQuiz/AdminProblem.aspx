@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OnlineQuiz.Master" AutoEventWireup="true" CodeBehind="AdminProblem.aspx.cs" Inherits="OnlineQuiz.AdminProblem" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OnlineQuiz.Master"  enableEventValidation="false"  AutoEventWireup="true" CodeBehind="AdminProblem.aspx.cs" Inherits="OnlineQuiz.AdminProblem" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!doctype html>
@@ -223,11 +223,50 @@ https://templatemo.com/tm-590-topic-listing
                         </center>
                 </div>
 
+
+
+
             </div>
         </div>
     </header>
+
+    </header>
+
+    </header>
+
+    </header>
+
+    </header>
+
+    </header>
+
+    </header>
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <center>
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+            <div>
+                <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal" OnItemCommand="DataList1_ItemCommand">
+                    <ItemTemplate>
+                        <asp:Image ID="Image1" runat="server" Height="100" Width="100" ImageUrl='<%# Eval("Prob_Images") %>' />
+                        <br></br>
+                        Student Name :
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
+                        <br></br>
+                        Student Email :
+                        <asp:Label ID="Label2" runat="server" Text='<%# Eval("Email") %>'></asp:Label>
+                        <br></br>
+                        Subject :
+                        <asp:Label ID="Label3" runat="server" Text='<%# Eval("Subject") %>'></asp:Label>
+                        <br></br>
+                        <asp:Button ID="Button1" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="cmd_solve" Text="Solve" />
+                    </ItemTemplate>
+                </asp:DataList>
+            </div>
+    </center>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <footer class="site-footer section-padding">
         <div class="container">
             <div class="row">
@@ -313,6 +352,4 @@ https://templatemo.com/tm-590-topic-listing
 
     </body>
 </html>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 </asp:Content>
