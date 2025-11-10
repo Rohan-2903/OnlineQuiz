@@ -168,18 +168,20 @@ https://templatemo.com/tm-590-topic-listing
 
                 <form action="#" method="post" enctype="multipart/form-data">
                     <label for="courseName">Course Name</label>
-                    <input type="text" id="courseName" name="courseName" placeholder="Enter course name" required>
+                    <asp:TextBox ID="txtcoursenm" runat="server" placeholder="Enter course name"></asp:TextBox>
 
                     <label for="courseCode">Course Code</label>
-                    <input type="text" id="courseCode" name="courseCode" placeholder="Enter course code" required>
+                    <asp:TextBox ID="txtcoursecode" runat="server" placeholder="Enter course code"></asp:TextBox>
 
                     <label for="courseImage">Course Image</label>
-                    <input type="file" id="courseImage" name="courseImage" accept="image/*" required>
+                    <asp:FileUpload ID="fipimg" runat="server" />
 
                     <label for="courseDesc">Course Description</label>
-                    <textarea id="courseDesc" name="courseDesc" rows="2" placeholder="Write a short definition..." required></textarea>
+                    <asp:TextBox ID="txtcoursedes" runat="server"  rows="2" placeholder="Write a short definition..."></asp:TextBox>                    
 
-                    <button type="submit">Add Course</button>
+                    <asp:Button ID="btnaddcrs" runat="server" type="submit" Text="Add Course" />
+
+                    <asp:Label ID="lblMessage" runat="server" ForeColor="Red" CssClass = "success-message" ></asp:Label>
                 </form>
             </div>
         </body>
