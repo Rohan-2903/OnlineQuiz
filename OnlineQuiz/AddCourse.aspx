@@ -4,6 +4,65 @@
     <!doctype html>
     <html>
     <head>
+        <style>
+            /* body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #8de0dc, #2c7ea1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }*/
+
+            /*.container {
+                background-color: #fff;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                padding: 30px 40px;
+                width: 400px;
+            }*/
+
+            /* .container h2 {
+                    text-align: center;
+                    color: #222;
+                    margin-bottom: 25px;
+                }*/
+
+            label {
+                font-weight: 600;
+                display: block;
+                margin-bottom: 6px;
+                color: #333;
+            }
+
+            input[type="text"],
+            textarea,
+            input[type="file"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 14px;
+            }
+
+            button {
+                background-color: #2c7ea1;
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                width: 100%;
+                font-size: 16px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+                button:hover {
+                    background-color: #256a86;
+                }
+        </style>
+        </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -102,6 +161,29 @@ https://templatemo.com/tm-590-topic-listing
     </header>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+
+        <body>
+            <div class="container">
+
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <label for="courseName">Course Name</label>
+                    <input type="text" id="courseName" name="courseName" placeholder="Enter course name" required>
+
+                    <label for="courseCode">Course Code</label>
+                    <input type="text" id="courseCode" name="courseCode" placeholder="Enter course code" required>
+
+                    <label for="courseImage">Course Image</label>
+                    <input type="file" id="courseImage" name="courseImage" accept="image/*" required>
+
+                    <label for="courseDesc">Course Description</label>
+                    <textarea id="courseDesc" name="courseDesc" rows="2" placeholder="Write a short definition..." required></textarea>
+
+                    <button type="submit">Add Course</button>
+                </form>
+            </div>
+        </body>
+        </section>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <footer class="site-footer section-padding">
