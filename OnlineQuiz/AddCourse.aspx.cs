@@ -44,7 +44,9 @@ namespace OnlineQuiz
 
         }
 
-        protected void btnaddcrs_Click(object sender, EventArgs e)
+        
+
+        protected void btnaddcrs_Click1(object sender, EventArgs e)
         {
             string companyName = txtcoursenm.Text.Trim();
 
@@ -58,7 +60,7 @@ namespace OnlineQuiz
             {
                 getcon(); // opens class-level con
                 imgupload();
-                cmd = new SqlCommand("insert into add_course (CourseName,CourseCode,Description,Images) values ('" + txtcoursenm.Text + "','" + txtcoursecode.Text + "','" + txtcoursedes.Text + "','"+fnm+"')", con);
+                cmd = new SqlCommand("insert into add_course (CourseName,CourseCode,Description,Images) values ('" + txtcoursenm.Text + "','" + txtcoursecode.Text + "','" + txtcoursedes.Text + "','" + fnm + "')", con);
                 int rows = cmd.ExecuteNonQuery();
 
                 if (rows > 0)
@@ -85,7 +87,6 @@ namespace OnlineQuiz
                     con.Close();
                 }
             }
-
         }
     }
 }

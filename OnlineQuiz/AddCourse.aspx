@@ -179,7 +179,7 @@ https://templatemo.com/tm-590-topic-listing
                     <label for="courseDesc">Course Description</label>
                     <asp:TextBox ID="txtcoursedes" runat="server"  rows="2" placeholder="Write a short definition..."></asp:TextBox>                    
 
-                    <asp:Button ID="btnaddcrs" runat="server" type="submit" Text="Add Course" />
+                    <asp:Button ID="btnaddcrs" runat="server" type="submit" Text="Add Course" OnClick="btnaddcrs_Click1" />
 
                     <asp:Label ID="lblMessage" runat="server" ForeColor="Red" CssClass = "success-message" ></asp:Label>
                 </form>
