@@ -31,7 +31,7 @@ TemplateMo 590 topic listing
 https://templatemo.com/tm-590-topic-listing
 
 -->
-        <%-- <style>
+        <style>
             h1 {
                 /* background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); */
                 color: white;
@@ -158,7 +158,7 @@ https://templatemo.com/tm-590-topic-listing
                             letter-spacing: 0.5px;
                             padding: 18px 15px !important;
                         }
-        </style>--%>
+        </style>
     </head>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -228,8 +228,42 @@ https://templatemo.com/tm-590-topic-listing
             </div>
         </div>
     </header>
+    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+        <center>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowCommand="GridView1_RowCommand">
+                <Columns>
+                    <asp:TemplateField HeaderText="ID">
+                        <ItemTemplate>
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("Id") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="IMAGES">
+                        <ItemTemplate>
+                            <asp:Image ID="Image1" runat="server" Height="100" Width="100" ImageUrl='<%# Eval("Images") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="COURSE CODE">
+                        <ItemTemplate>
+                            <asp:Label ID="Label2" runat="server" Text='<%# Eval("CourseCode") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="COURSE NAME">
+                        <ItemTemplate>
+                            <asp:Label ID="Label3" runat="server" Text='<%# Eval("CourseName") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="QUIZ">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="cmd_quiz">Take Quiz</asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+        </center>
+    </section>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <footer class="site-footer section-padding">
